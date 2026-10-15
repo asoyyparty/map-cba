@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="50%" stop-color="#0B132B"/>
+      <stop offset="100%" stop-color="#060913"/>
+    </linearGradient>
+    <linearGradient id="cyanLine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+    <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="30%" stop-color="#38BDF8"/>
+      <stop offset="70%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#0284C7" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect x="24" y="24" width="464" height="464" rx="112" ry="112" fill="url(#bgGrad)" stroke="#38BDF8" stroke-width="6"/>
+
+  <!-- Radar Rings -->
+  <circle cx="256" cy="256" r="160" fill="none" stroke="#1E293B" stroke-width="3" stroke-dasharray="8 8"/>
+  <circle cx="256" cy="256" r="110" fill="none" stroke="#0284C7" stroke-width="2" opacity="0.4"/>
+
+  <!-- Hexagon Ring -->
+  <polygon points="256,131 364,193.5 364,318.5 256,381 148,318.5 148,193.5" 
+           fill="none" stroke="url(#cyanLine)" stroke-width="6"/>
+
+  <!-- Spokes to Center -->
+  <g stroke="#38BDF8" stroke-width="4">
+    <line x1="256" y1="256" x2="256" y2="131"/>
+    <line x1="256" y1="256" x2="364" y2="193.5"/>
+    <line x1="256" y1="256" x2="364" y2="318.5"/>
+    <line x1="256" y1="256" x2="256" y2="381"/>
+    <line x1="256" y1="256" x2="148" y2="318.5"/>
+    <line x1="256" y1="256" x2="148" y2="193.5"/>
+  </g>
+
+  <!-- 6 Outer Nodes -->
+  <circle cx="256" cy="131" r="16" fill="#00F2FE"/>
+  <circle cx="364" cy="193.5" r="16" fill="#38BDF8"/>
+  <circle cx="364" cy="318.5" r="16" fill="#60A5FA"/>
+  <circle cx="256" cy="381" r="16" fill="#00F2FE"/>
+  <circle cx="148" cy="318.5" r="16" fill="#60A5FA"/>
+  <circle cx="148" cy="193.5" r="16" fill="#38BDF8"/>
+
+  <!-- Center Core -->
+  <circle cx="256" cy="256" r="38" fill="#0B132B" stroke="#38BDF8" stroke-width="5"/>
+  <circle cx="256" cy="256" r="24" fill="url(#coreGlow)"/>
+  <circle cx="256" cy="256" r="10" fill="#FFFFFF"/>
+</svg>
